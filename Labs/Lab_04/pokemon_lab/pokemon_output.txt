@@ -1,0 +1,34 @@
+Output for make Test:
+    --- Running Test Pipeline (Built-in Test Modes) ---
+    # 1. Run the update script (triggers test() function by default)
+    Running update_portfolio.py in Test Mode...
+    Portfolio successfully updated and saved to test_card_portfolio.csv
+    # 2. Run the summary script (triggers test() function by default)
+    ===== Portfolio Summary =====
+    Total Portfolio Value: $0.00
+    Most Valuable Card:
+    Name: Alakazam
+    ID: base1-1
+    Market Value: $0.00
+    Test complete.
+
+Output for make Add_Set:
+    --- Adding New Card Set ---
+    Enter the TCG Card Set ID (e.g., base1, base4): base1
+    Fetching card data for set ID: base1 ...
+    Card data for set 'base1' has been saved to card_set_lookup/base1.json
+
+Output for make all:
+    All card sets have been refreshed successfully.
+    make[1]: Leaving directory '/workspaces/DS-2002-F25/Labs/Lab_04/pokemon_lab'
+    Starting full production pipeline...
+    Running ETL process (update_portfolio)...
+    Portfolio successfully updated and saved to card_portfolio.csv
+    Running reporting process (generate_summary)...
+    ===== Portfolio Summary =====
+    Total Portfolio Value: $3,818.52
+    Most Valuable Card:
+    Name: Charizard
+    ID: base1-4
+    Market Value: $457.99
+    Production pipeline completed successfully.
